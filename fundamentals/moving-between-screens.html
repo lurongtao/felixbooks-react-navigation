@@ -1,0 +1,424 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>页面间跳转 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="passing-parameters-to-routes.html" />
+    
+    
+    <link rel="prev" href="hello-react-navigation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="getting-started.html">
+            
+                <a href="getting-started.html">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="hello-react-navigation.html">
+            
+                <a href="hello-react-navigation.html">
+            
+                    
+                    初探 React Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="moving-between-screens.html">
+            
+                <a href="moving-between-screens.html">
+            
+                    
+                    页面间跳转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="passing-parameters-to-routes.html">
+            
+                <a href="passing-parameters-to-routes.html">
+            
+                    
+                    路由传参
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >页面间跳转</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x9875;&#x9762;&#x95F4;&#x8DF3;&#x8F6C;">&#x9875;&#x9762;&#x95F4;&#x8DF3;&#x8F6C;</h1>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x8282; <a href="hello-react-navigation.html">Hello React Navigation</a>&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x4E24;&#x4E2A;&#x8DEF;&#x7531;&#xFF08;Home&#x548C;Details&#xFF09;&#x7684;&#x5BFC;&#x822A;&#x5668;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x8BA9;&#x7528;&#x6237;&#x4ECE;Home&#x5BFC;&#x822A;&#x5230;Details&#x3002;</p>
+<p>&#x5982;&#x679C;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5199;&#x8FD9;&#x6837;&#x7684;&#x4E1C;&#x897F;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;details.html&quot;</span>&gt;</span>Go to Details<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<p>&#x6216;&#x8005;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span>
+  <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> {
+    window.location.href = &apos;details.html&apos;;
+  }}
+&gt;
+  Go to Details
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x5B9E;&#x73B0;&#x7C7B;&#x4F3C;&#x7B2C;&#x4E8C;&#x79CD;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528;&#x4F20;&#x9012;&#x5230;&#x5C4F;&#x5E55;&#x7EC4;&#x4EF6;&#x7684;&#x5BFC;&#x822A;&#x5C5E;&#x6027;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F7F;&#x7528;window.location &#x5168;&#x5C40;&#x9009;&#x9879;&#x3002;</p>
+<h2 id="&#x5BFC;&#x822A;&#x5230;&#x65B0;&#x7A97;&#x53E3;">&#x5BFC;&#x822A;&#x5230;&#x65B0;&#x7A97;&#x53E3;</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { Button, View, Text } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-native&apos;</span>;
+<span class="hljs-keyword">import</span> { NavigationContainer } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@react-navigation/native&apos;</span>;
+<span class="hljs-keyword">import</span> { createStackNavigator } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@react-navigation/stack&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">HomeScreen</span>(<span class="hljs-params">{ navigation }</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">flex:</span> <span class="hljs-attr">1</span>, <span class="hljs-attr">alignItems:</span> &apos;<span class="hljs-attr">center</span>&apos;, <span class="hljs-attr">justifyContent:</span> &apos;<span class="hljs-attr">center</span>&apos; }}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Text</span>&gt;</span>Home Screen<span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Button</span>
+        <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Go to Details&quot;</span>
+        <span class="hljs-attr">onPress</span>=<span class="hljs-string">{()</span> =&gt;</span> navigation.navigate(&apos;Details&apos;)}
+      /&gt;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span>
+  );
+}
+
+// ... &#x5176;&#x4ED6;&#x4EE3;&#x7801;
+</span></code></pre>
+<p>&#x89E3;&#x91CA;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li><p>navigation&#xFF1A;&#x5728;&#x8DEF;&#x7531;&#x6808;&#x7684;&#x5B9A;&#x4E49;&#x7684;&#x7EC4;&#x4EF6;(component&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x7684;&#x7EC4;&#x4EF6;)&#xFF0C;&#x9ED8;&#x8BA4;&#x4F1A;&#x4F20;&#x7ED9;&#x5B9A;&#x4E49;&#x7684;&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E00;&#x4E2A; navigation &#x5C5E;&#x6027;&#x3002;</p>
+</li>
+<li><p>navigate(&apos;Details&apos;)&#xFF1A;&#x6211;&#x4EEC;&#x8C03;&#x7528; navigate &#x51FD;&#x6570;&#xFF0C;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x662F;&#x5728;&#x5BFC;&#x822A;&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x7684;&#x540D;&#x5B57;&#xFF08;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x76F4;&#x63A5;&#x5F15;&#x7528;&#x8DEF;&#x7531;&#x540D;&#x5B57;&#xFF09;</p>
+</li>
+</ul>
+<blockquote>
+<p>&#x5982;&#x679C;&#x8C03;&#x7528; navigation.navigate &#x65F6;&#x4F7F;&#x7528;&#x7684;&#x8DEF;&#x7531;&#x540D;&#x79F0;&#x4E0D;&#x662F;&#x5728;&#x5806;&#x6808;&#x5BFC;&#x822A;&#x5668;&#x4E0A;&#x5B9A;&#x4E49;&#x7684;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x4EFB;&#x4F55;&#x4E8B;&#x60C5;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x80FD;&#x5BFC;&#x822A;&#x5230;&#x5806;&#x6808;&#x5BFC;&#x822A;&#x5668;&#x4E0A;&#x5B9A;&#x4E49;&#x7684;&#x8DEF;&#x7531;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x80FD;&#x5BFC;&#x822A;&#x5230;&#x4EFB;&#x610F;&#x7EC4;&#x4EF6;&#x3002;</p>
+</blockquote>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6709;&#x4E86;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E24;&#x6761;&#x8DEF;&#x7531;&#x7684;&#x5806;&#x6808;&#xFF1A;1&#xFF09;&#x4E3B;&#x8DEF;&#x7531; 2&#xFF09;&#x8BE6;&#x7EC6;&#x9875;&#x8DEF;&#x7531;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4ECE;&#x8BE6;&#x60C5;&#x9875;&#x518D;&#x6B21;&#x5BFC;&#x822A;&#x5230;&#x8BE6;&#x60C5;&#x9875;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#xFF1F;</p>
+<h2 id="&#x591A;&#x6B21;&#x5BFC;&#x822A;&#x540C;&#x4E00;&#x8DEF;&#x7531;">&#x591A;&#x6B21;&#x5BFC;&#x822A;&#x540C;&#x4E00;&#x8DEF;&#x7531;</h2>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">DetailsScreen</span>(<span class="hljs-params">{ navigation }</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">flex:</span> <span class="hljs-attr">1</span>, <span class="hljs-attr">alignItems:</span> &apos;<span class="hljs-attr">center</span>&apos;, <span class="hljs-attr">justifyContent:</span> &apos;<span class="hljs-attr">center</span>&apos; }}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Text</span>&gt;</span>Details Screen<span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Button</span>
+        <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Go to Details... again&quot;</span>
+        <span class="hljs-attr">onPress</span>=<span class="hljs-string">{()</span> =&gt;</span> navigation.navigate(&apos;Details&apos;)}
+      /&gt;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span>
+  );
+}
+</span></code></pre>
+<p>&#x5982;&#x679C;&#x60A8;&#x8FD0;&#x884C;&#x6B64;&#x4EE3;&#x7801;&#xFF0C;&#x60A8;&#x5C06;&#x6CE8;&#x610F;&#x5230;&#x5F53;&#x60A8;&#x70B9;&#x51FB; &#x201C;&#x8F6C;&#x5230;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x2026;&#x201D;&#xFF0C;&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x5B83;&#x4EC0;&#x4E48;&#x4E5F;&#x505A;&#x4E0D;&#x4E86;&#xFF01;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5728;&#x8BE6;&#x60C5;&#x9875;&#x8DEF;&#x7531;&#x4E0A;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x5728;&#x90A3;&#x4E2A;&#x5C4F;&#x5E55;&#x4E0A;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C06;&#x4EC0;&#x4E48;&#x4E5F;&#x4E0D;&#x4F1A;&#x505A;&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x771F;&#x7684;&#x60F3;&#x5BFC;&#x822A;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x8BE6;&#x7EC6;&#x9875;&#x3002;&#x8FD9;&#x5728;&#x5411;&#x6BCF;&#x4E2A;&#x8DEF;&#x7531;&#x4F20;&#x9012;&#x4E00;&#x4E9B;&#x552F;&#x4E00;&#x6570;&#x636E;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x975E;&#x5E38;&#x5E38;&#x89C1;&#xFF08;&#x7A0D;&#x540E;&#x6211;&#x4EEC;&#x8BA8;&#x8BBA;params&#x65F6;&#x4F1A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#xFF09;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x201C;&#x5BFC;&#x822A;&#x201D;&#x66F4;&#x6539;&#x4E3A;&#x201C;&#x63A8;&#x9001;&#x201D;&#x3002;&#x8FD9;&#x4F7F;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x8868;&#x8FBE;&#x6DFB;&#x52A0;&#x53E6;&#x4E00;&#x6761;&#x8DEF;&#x7EBF;&#x7684;&#x610F;&#x56FE;&#xFF0C;&#x800C;&#x4E0D;&#x7BA1;&#x73B0;&#x6709;&#x7684;&#x5BFC;&#x822A;&#x5386;&#x53F2;&#x3002;</p>
+<pre><code class="lang-js">&lt;Button
+  title=<span class="hljs-string">&quot;Go to Details... again&quot;</span>
+  onPress={() =&gt; navigation.push(<span class="hljs-string">&apos;Details&apos;</span>)}
+/&gt;
+</code></pre>
+<p><div align="center"><img src="../_images/push_stack_nav-demo.gif" alt="&#x5BFC;&#x822A;demo"></div></p>
+<p>&#x6BCF;&#x6B21;&#x8C03;&#x7528;push&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x90FD;&#x4F1A;&#x5411;&#x5BFC;&#x822A;&#x5806;&#x6808;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x65B0;&#x8DEF;&#x7531;&#x3002;&#x5F53;&#x60A8;&#x8C03;&#x7528;&#x5BFC;&#x822A;&#x65F6;&#xFF0C;&#x5B83;&#x9996;&#x5148;&#x8BD5;&#x56FE;&#x627E;&#x5230;&#x5177;&#x6709;&#x8BE5;&#x540D;&#x79F0;&#x7684;&#x73B0;&#x6709;&#x8DEF;&#x7531;&#xFF0C;&#x5982;&#x679C;&#x6808;&#x4E0A;&#x8FD8;&#x6CA1;&#x6709;&#x4E00;&#x4E2A;&#x8DEF;&#x7531;&#xFF0C;&#x5219;&#x53EA;&#x63A8;&#x4E00;&#x6761;&#x65B0;&#x8DEF;&#x7531;&#x3002;</p>
+<h2 id="&#x8FD4;&#x56DE;">&#x8FD4;&#x56DE;</h2>
+<p>&#x5F53;&#x4ECE;&#x6D3B;&#x52A8;&#x9875;&#x9762;&#x8FD4;&#x56DE;&#x65F6;&#xFF0C;stack navigator &#x63D0;&#x4F9B;&#x7684;&#x6807;&#x9898;&#x5C06;&#x81EA;&#x52A8;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x540E;&#x9000;&#x6309;&#x94AE;&#xFF08;&#x5982;&#x679C;&#x5BFC;&#x822A;&#x5806;&#x6808;&#x4E2D;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5C4F;&#x5E55;&#xFF0C;&#x5219;&#x6CA1;&#x6709;&#x53EF;&#x8FD4;&#x56DE;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x56E0;&#x6B64;&#x6CA1;&#x6709;&#x540E;&#x9000;&#x6309;&#x94AE;&#xFF09;&#x3002;</p>
+<p>&#x6709;&#x65F6;&#x60A8;&#x5E0C;&#x671B;&#x80FD;&#x591F;&#x4EE5;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x89E6;&#x53D1;&#x6B64;&#x884C;&#x4E3A;&#xFF0C;&#x4E3A;&#x6B64;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>navigation.goBack();</code></p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">DetailsScreen</span>(<span class="hljs-params">{ navigation }</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    &lt;View style={{ flex: 1, alignItems: &apos;center&apos;, justifyContent: &apos;center&apos; }}&gt;
+      &lt;Text&gt;Details Screen&lt;/Text&gt;
+      &lt;Button
+        title=&quot;Go to Details... again&quot;
+        onPress={() =&gt; navigation.push(&apos;Details&apos;)}
+      /&gt;
+      &lt;Button title=&quot;Go to Home&quot; onPress={() =&gt; navigation.navigate(&apos;Home&apos;)} /&gt;
+      &lt;Button title=&quot;Go back&quot; onPress={() =&gt; navigation.goBack()} /&gt;
+    &lt;/View&gt;
+  );
+}
+</code></pre>
+<blockquote>
+<p>&#x5728; Android &#x8BBE;&#x5907;&#x4E0A;&#xFF0C;React Navigation &#x4F1A;&#x52FE;&#x4F4F;&#x786C;&#x4EF6;&#x201C;&#x540E;&#x9000;&#x201D;&#x6309;&#x94AE;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x6309;&#x4E0B;&#x201C;&#x540E;&#x9000;&#x201D;&#x6309;&#x94AE;&#xFF0C;&#x5B83;&#x4F1A;&#x4E3A;&#x60A8;&#x89E6;&#x53D1;goBack()&#x51FD;&#x6570;&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x7684;&#x884C;&#x4E3A;&#x4E0E;&#x7528;&#x6237;&#x671F;&#x671B;&#x7684;&#x4E00;&#x6837;&#x3002;</p>
+</blockquote>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x9700;&#x6C42;&#x662F;&#x80FD;&#x591F;&#x8DE8;&#x9875;&#x9762;&#x8FD4;&#x56DE;&#xFF1A;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x5728;&#x4E00;&#x4E2A;&#x5806;&#x6808;&#x4E2D;&#x6709;&#x591A;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x5E76;&#x4E14;&#x5E0C;&#x671B;&#x5173;&#x95ED;&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x9875;&#x9762;&#x4EE5;&#x8FD4;&#x56DE;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;navigate(&apos;Home&apos;) &#xFF08;&#x800C;&#x4E0D;&#x662F;push&#xFF01;&#x8BD5;&#x8BD5;&#x770B;&#x533A;&#x522B;&#xFF09;&#x3002;&#x53E6;&#x4E00;&#x79CD;&#x9009;&#x62E9;&#x662F; <code>navigation.popToTop()</code>&#xFF0C;&#x5B83;&#x8FD4;&#x56DE;&#x5230;&#x5806;&#x6808;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">DetailsScreen</span>(<span class="hljs-params">{ navigation }</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    &lt;View style={{ flex: 1, alignItems: &apos;center&apos;, justifyContent: &apos;center&apos; }}&gt;
+      &lt;Text&gt;Details Screen&lt;/Text&gt;
+      &lt;Button
+        title=&quot;Go to Details... again&quot;
+        onPress={() =&gt; navigation.push(&apos;Details&apos;)}
+      /&gt;
+      &lt;Button title=&quot;Go to Home&quot; onPress={() =&gt; navigation.navigate(&apos;Home&apos;)} /&gt;
+      &lt;Button title=&quot;Go back&quot; onPress={() =&gt; navigation.goBack()} /&gt;
+      &lt;Button
+        title=&quot;Go back to first screen in stack&quot;
+        onPress={() =&gt; navigation.popToTop()}
+      /&gt;
+    &lt;/View&gt;
+  );
+}
+</code></pre>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<ul>
+<li><p>navigation.navigate(&apos;RouteName&apos;) &#x5982;&#x679C;&#x65B0;&#x8DEF;&#x7531;&#x4E0D;&#x5728;&#x5806;&#x6808;&#x4E2D;&#xFF0C;&#x5219;&#x5C06;&#x5176;&#x63A8;&#x9001;&#x5230;&#x5806;&#x6808;&#x5BFC;&#x822A;&#x5668;&#xFF0C;&#x5426;&#x5219;&#x5C06;&#x8DF3;&#x5230;&#x8BE5;&#x9875;&#x9762;&#x3002;</p>
+</li>
+<li><p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x591A;&#x6B21;&#x8C03;&#x7528; <code>navigation.push(&apos;RouteName&apos;)</code>&#xFF0C;&#x5B83;&#x5C06;&#x7EE7;&#x7EED;&#x63A8;&#x9001;&#x8DEF;&#x7531;&#x3002;</p>
+</li>
+<li><p>&#x6807;&#x9898;&#x680F;&#x5C06;&#x81EA;&#x52A8;&#x663E;&#x793A;&#x540E;&#x9000;&#x6309;&#x94AE;&#xFF0C;&#x4F46;&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>navigation.goBack()</code> &#x4EE5;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x8FD4;&#x56DE;&#x3002;&#x5728; Android &#x4E0A;&#xFF0C;&#x786C;&#x4EF6;&#x540E;&#x9000;&#x6309;&#x94AE;&#x6B63;&#x5982;&#x9884;&#x671F;&#x7684;&#x90A3;&#x6837;&#x5DE5;&#x4F5C;&#x3002;</p>
+</li>
+<li><p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x5BFC;&#x822A;&#x4E2D;&#x8FD4;&#x56DE;&#x5230;&#x5806;&#x6808;&#x4E2D;&#x7684;&#x73B0;&#x6709;&#x9875;&#x9762;&#x3002;navigation(&apos;RoutNeMy&apos;)&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x5230;&#x5806;&#x6808;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x3002;</p>
+</li>
+<li><p>&#x5BFC;&#x822A; props &#x53EF;&#x7528;&#x4E8E;&#x6240;&#x6709; Screen &#x5B9A;&#x4E49;&#x7684;&#x7EC4;&#x4EF6;&#x3002;</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="hello-react-navigation.html" class="navigation navigation-prev " aria-label="Previous page: 初探 React Navigation">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="passing-parameters-to-routes.html" class="navigation navigation-next " aria-label="Next page: 路由传参">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"页面间跳转","level":"1.2.3","depth":2,"next":{"title":"路由传参","level":"1.2.4","depth":2,"path":"fundamentals/passing-parameters-to-routes.md","ref":"fundamentals/passing-parameters-to-routes.md","articles":[]},"previous":{"title":"初探 React Navigation","level":"1.2.2","depth":2,"path":"fundamentals/hello-react-navigation.md","ref":"fundamentals/hello-react-navigation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"fundamentals/moving-between-screens.md","mtime":"2020-02-15T11:53:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-17T04:23:36.952Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

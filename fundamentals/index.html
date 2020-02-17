@@ -1,0 +1,315 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>基础 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="getting-started.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="getting-started.html">
+            
+                <a href="getting-started.html">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="hello-react-navigation.html">
+            
+                <a href="hello-react-navigation.html">
+            
+                    
+                    初探 React Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="moving-between-screens.html">
+            
+                <a href="moving-between-screens.html">
+            
+                    
+                    页面间跳转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="passing-parameters-to-routes.html">
+            
+                <a href="passing-parameters-to-routes.html">
+            
+                    
+                    路由传参
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >基础</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="react-navigation-&#x5BFC;&#x822A;&#x7CFB;&#x7EDF;">React Navigation &#x5BFC;&#x822A;&#x7CFB;&#x7EDF;</h1>
+<p>React Navigation&#xFF0C;&#x662F;&#x4E13;&#x95E8;&#x4E3A; React Native &#x7684;&#x5E94;&#x7528;&#x6253;&#x9020;&#x7684;&#x8DEF;&#x7531;&#x548C;&#x5BFC;&#x822A;&#x7CFB;&#x7EDF;&#x3002;</p>
+<h2 id="&#x7279;&#x70B9;">&#x7279;&#x70B9;</h2>
+<h4 id="&#x4F7F;&#x7528;&#x7B80;&#x5355;">&#x4F7F;&#x7528;&#x7B80;&#x5355;</h4>
+<p>&#x5F00;&#x7BB1;&#x5373;&#x7528;&#xFF0C;&#x4F53;&#x9A8C;&#x8D85;&#x597D;&#x7684;&#x5185;&#x7F6E;&#x5BFC;&#x822A;&#x5668;&#x3002;</p>
+<h4 id="&#x4E3A;ios&#x548C;android&#x6784;&#x5EFA;&#x7684;&#x7EC4;&#x4EF6;">&#x4E3A;iOS&#x548C;Android&#x6784;&#x5EFA;&#x7684;&#x7EC4;&#x4EF6;</h4>
+<p>&#x517C;&#x5BB9;iOS &#x548C; Android &#x5E73;&#x53F0;&#xFF0C;&#x6839;&#x636E;&#x7279;&#x5B9A;&#x7684;&#x5E73;&#x53F0;&#xFF0C;&#x6253;&#x9020;&#x5916;&#x89C2;&#x548C;&#x611F;&#x89C9;&#x4E0E;&#x5E73;&#x6ED1;&#x7684;&#x52A8;&#x753B;&#x548C;&#x624B;&#x52BF;&#x3002;</p>
+<h4 id="&#x5B8C;&#x5168;&#x53EF;&#x5B9A;&#x5236;">&#x5B8C;&#x5168;&#x53EF;&#x5B9A;&#x5236;</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x4F7F;&#x7528;JavaScript&#x7F16;&#x5199;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;React&#x5BFC;&#x822A;&#x7684;&#x4EFB;&#x4F55;&#x90E8;&#x5206;&#x3002;</p>
+<h4 id="&#x5E73;&#x53F0;&#x6269;&#x5C55;&#x7279;&#x6027;">&#x5E73;&#x53F0;&#x6269;&#x5C55;&#x7279;&#x6027;</h4>
+<p>React Navigation &#x5728;&#x6BCF;&#x4E00;&#x5C42;&#x90FD;&#x662F;&#x53EF;&#x6269;&#x5C55;&#x7684;&#x2014;&#x2014;&#x4F60;&#x53EF;&#x4EE5;&#x7F16;&#x5199;&#x81EA;&#x5DF1;&#x7684;&#x5BFC;&#x822A;&#x5668;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x66FF;&#x6362;&#x9762;&#x5411;&#x7528;&#x6237;&#x7684;API&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 前言">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="getting-started.html" class="navigation navigation-next " aria-label="Next page: 起步">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"基础","level":"1.2","depth":1,"next":{"title":"起步","level":"1.2.1","depth":2,"path":"fundamentals/getting-started.md","ref":"fundamentals/getting-started.md","articles":[]},"previous":{"title":"前言","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"fundamentals/README.md","mtime":"2020-02-15T07:41:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-17T04:23:36.952Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
